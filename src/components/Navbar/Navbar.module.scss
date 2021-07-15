@@ -1,0 +1,43 @@
+
+
+
+.nav {
+    grid-area: n;
+    background-color: burlywood;
+    padding: 20px;
+}
+
+.item a {
+    color: white;
+    text-decoration: none;
+}
+
+//если у элемента есть класс item и active: className="item active"
+.item a.activeLink {
+    color: gold;
+}
+
+
+
+.friendsBlock {
+    margin-top: 200px;
+}
+
+.friendsContainer {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.friend {
+    display: flex;
+    flex-direction: column;
+    margin: auto 10px;
+}
+
+.ava img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+

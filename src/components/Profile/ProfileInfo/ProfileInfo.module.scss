@@ -1,0 +1,26 @@
+
+
+
+
+//в классах js запрещено юзать дефис, иначе обращаться по-другому через ["top-content-img"]
+.topContentImg {
+    width: 100%;
+}
+
+.descriptionBlock {
+    padding: 10px;
+}
+
+
+
+
+.avaContainer {
+    display: flex;
+    margin: auto 0 0 0;
+}
+
+.avaContainer img {
+    width: 250px;
+    height: 250px;
+    border-radius: 25px;
+}

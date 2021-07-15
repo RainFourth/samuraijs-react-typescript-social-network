@@ -1,0 +1,37 @@
+
+ДО ЗАВЕРШЕНИЯ МЕТОДА КОЛБЭКА НОВЫЕ ПРОПСЫ НЕ ПОСТУПЯТ В КОМПОНЕНТУ!!!
+И все необходимые изменённые параметры надо кидать в аргументы функции.
+
+
+
+Если в state ссылка на объект не изменилась, то он считается неизменным и компонента не перерисуется.
+
+
+
+Передача URL в props - withRouter
+1) connect(mstp, mdtp)(withRouter(Component))
+2) Указываем переменную в <Route path="profile/:userId?" .... />
+: - начало переменной
+? - если есть, то параметр необязателен
+3) достаём userId из props.match.params.userId
+
+
+
+
+HOC - High Order Component - даёт дополнительный функционал нашей компоненте
+(в данном случае перенаправляет на страницу логина если не авторизованы)
+(можно внутри написать классовую компрненту вместо функциональной):
+
+const mapStateToPropsForRedirect = (state) => ({
+    isAuth: state.auth.isAuth,
+});
+export const withAuthRedirect =
+    (Component) =>
+        connect(mapStateToPropsForRedirect)(
+            (props) => {
+                if (!props.isAuth) return <Redirect to={"/login"}/>
+                return <Component {...props}/>
+        })
+
+Использование:
+... = connect(mstp, mdtp)(withAuthRedirect(Component));

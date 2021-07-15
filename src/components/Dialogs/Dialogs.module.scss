@@ -1,0 +1,24 @@
+
+
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+.dialogItems {
+    padding: 10px;
+}
+
+.dialog a {
+    text-decoration: none;
+    color: white;
+}
+
+//работает только для элемента, имеющего класс activeLink и находящегося внутри
+// (не только на первом уровне вложенности) элемента с классом dialogItems
+.dialogItems .activeLink {
+    color: gold;
+}
+
+
+

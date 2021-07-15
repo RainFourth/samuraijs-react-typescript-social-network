@@ -1,0 +1,34 @@
+
+
+
+.messages {
+    padding: 10px;
+}
+
+.avaContainer {
+    display: flex;
+    margin: auto 0 0 0;
+}
+
+.avaContainer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.msgRight {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.msgLeft {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.messages .msg {
+    color: white;
+    align-self: flex-end;
+}
+

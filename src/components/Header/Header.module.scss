@@ -1,0 +1,27 @@
+
+/*переменная*/
+$header-color: green;
+
+
+.header {
+    grid-area: h; /*задаваемое имя области*/
+    background-color: $header-color;
+
+    img { /*для img лежащих в .header - вариант 2 */
+        width: 60px;
+    }
+
+}
+
+/*.header img { !*для img лежащих в .header - вариант 1 *!
+    width: 60px;
+}*/
+
+
+
+.loginBlock {
+    float: right;
+    a {
+        color: white;
+    }
+}
